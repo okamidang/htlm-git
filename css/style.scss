@@ -1,0 +1,477 @@
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "Copperplate Gothic";
+    src: url("../fonts/Copperplate Gothic Bold Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Metra Serif";
+    src: url("../fonts/Metra Serif W01 Bold Cap.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../fonts/Century Gothic Regular.ttf") format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #000;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.slide {
+    background: #000;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    .container {
+        height: 100vh;
+        position: relative;
+        .title {
+            z-index: 2;
+            .bg-title {
+                width: 42vh;
+            }
+            .title-silde {
+                font-family: "Copperplate Gothic";
+                font-size: 4vh;
+                position: absolute;
+                top: 1vh;
+                color: #a78256;
+                width: 100%;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.slide1 {
+    background-image: url("../images/slide1/bg1.jpg");
+    overflow: hidden;
+    .container {
+        padding: 0;
+        .logo {
+            width: 20vh;
+            position: relative;
+            top: 2vh;
+        }
+        .playvideo {
+            display: flex;
+            position: relative;
+            width: 9.2vh;
+            height: 9.2vh;
+            margin-top: 28vh;
+            margin-bottom: -5vh;
+        }
+        .title {
+            width: 60vh;
+        }
+        .timeline {
+            max-width: 80vh;
+            .gif {
+                ul {
+                    display: flex;
+                    padding: 0px;
+                    justify-content: space-between;
+                    li {
+                        padding: 0 0.5vh;
+                        a {
+                            filter: grayscale(1);
+                        }
+                        a.active {
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+            .gif-pc {
+                display: block;
+            }
+            .gif-mobile {
+                display: none;
+            }
+        }
+        .regis {
+            width: 30vh;
+            animation-name: brightness;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            margin-top: -2vh;
+        }
+        .download {
+            display: flex;
+            width: 32vh;
+            margin-top: -2vh;
+            a {
+                margin-right: 2vh;
+            }
+        }
+        .registered {
+            font-family: "Copperplate Gothic";
+            font-size: 2vh;
+            color: #ffffff;
+            display: block;
+            line-height: 3.6vh;
+            text-align: center;
+            span {
+                font-size: 3vh;
+                color: #ff4701;
+            }
+        }
+    }
+}
+
+@keyframes brightness {
+    0% {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.3);
+        -webkit-filter: brightness(1.3);
+    }
+    100% {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+}
+
+.slide2 {
+    background-image: url("../images/slide2/bg2.jpg");
+    .container {
+        .contain-info {
+            display: flex;
+            justify-content: center;
+            .char-slide2 {
+                width: 26.4vh;
+                height: 27.3vh;
+                position: relative;
+                top: -5vh;
+                left: -4vh;
+            }
+            .info {
+                max-width: 40vh;
+                form {
+                    font-family: "Century Gothic";
+                    font-size: 1.5vh;
+                    color: #fff;
+                    label {
+                        margin-top: 0.5rem;
+                    }
+                    input {
+                        width: 100%;
+                        background: #000;
+                        color: #fff;
+                        border: solid 2px #fff;
+                        line-height: 3.8vh;
+                        padding: 0px 10px;
+                    }
+                    .getcode {
+                        background: #ff4701;
+                        border: none;
+                        width: 10vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide3 {
+    background-image: url("../images/slide3/bg3.jpg");
+    overflow: hidden;
+    .container {
+        padding: 0px;
+        .clan {
+            position: absolute;
+            top: 1.2vh;
+            max-width: 80vh;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 80vh;
+            width: 100%;
+            .nav {
+                flex-wrap: nowrap;
+            }
+            .nav-tabs {
+                border-bottom: none;
+                .nav-item {}
+                .nav-link {
+                    filter: grayscale(1);
+                    border: none;
+                    padding: 0px;
+                }
+                .active {
+                    filter: grayscale(0);
+                    background-color: transparent;
+                }
+                .nav-link:hover {
+                    filter: grayscale(0);
+                    margin-top: 0.5vh;
+                }
+            }
+            .tab-content {
+                width: 100vh;
+                position: absolute;
+                left: 50%;
+                transform: translatex(-50%);
+                top: 38vh;
+            }
+        }
+    }
+}
+
+.slide4 {
+    background-image: url("../images/slide4/bg4.jpg");
+    .container {
+        .domain {
+            width: 40vh;
+            bottom: 5vh;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkbox {
+    margin-top: 1vh;
+}
+
+.checkbox input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    display: inline-block;
+    height: 2vh;
+    width: 2vh;
+    background-color: #000;
+    border: solid 2px #fff;
+    margin-top: 1vh;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkbox input:checked~.checkmark {
+    border: none;
+    background-color: #ff4701;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkbox .checkmark:after {
+    position: relative;
+    left: 0.6vh;
+    top: 0.3vh;
+    width: 0.6vh;
+    height: 1.2vh;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#carouselExampleIndicators {
+    max-width: 100vh;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.carousel-indicators {
+    margin-bottom: -5vh;
+}
+
+.carousel-indicators li {
+    width: 2vh;
+    height: 2vh;
+    float: left;
+    margin-right: 3vh;
+    background-color: #fff;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: 0.3s ease width;
+    border-top: none;
+    border-bottom: none;
+}
+
+.carousel-indicators li.active {
+    width: 10vh;
+    cursor: auto;
+    background-color: #ff4701;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 30px;
+    height: 50px;
+}
+
+.sidenav {
+    padding: 1.5vh 2.5vh 1.5vh 6vh;
+    position: fixed;
+    z-index: 999;
+    top: 30%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidenav a {
+    font-family: "Copperplate Gothic";
+    font-size: 2vh;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 1vh;
+    line-height: 3.6vh;
+}
+
+.sidenav .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 2.4vh;
+}
+
+.sidenav a img {
+    width: 3.8vh;
+}
+
+.sidenav a:hover {
+    color: #ff4701;
+}
+
+.linenav {
+    position: absolute;
+    width: 2.5vh;
+    top: 4.5vh;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .sidenav {
+        top: 0px;
+        width: 100%;
+        justify-content: space-between;
+        height: 7vh;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        flex-direction: row;
+        border-bottom: solid 2px #6f5600;
+        padding: 1.5vh 2.5vh 1.5vh 2.5vh;
+    }
+    .sidenav .clan,
+    .sidenav .fitur {
+        display: none;
+    }
+    .sidenav .social {
+        float: right;
+        flex-direction: row;
+    }
+    .sidenav .social a {
+        margin-left: 2vh;
+    }
+    .linenav {
+        display: none;
+    }
+    .clan .tab-content {
+        max-width: 130vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        padding-top: 7vh;
+    }
+    main {
+        height: calc(100vh - 7vh);
+        overflow: scroll;
+    }
+    .slide1 {
+        background-image: url("../images/slide1/bg1-small.jpg");
+    }
+    .slide1 .container .timeline {
+        max-width: 60vh;
+    }
+    .slide3 {
+        background-image: url("../images/slide3/bg3-small.jpg");
+    }
+    .slide4 {
+        background-image: url("../images/slide4/bg4-small.jpg");
+    }
+    .slide .container {
+        height: calc(100vh - 7vh);
+    }
+    .char-slide2 {
+        display: none;
+    }
+    .slide1 .container .timeline .gif-pc {
+        display: none;
+    }
+    .slide1 .container .timeline .gif-mobile {
+        display: block;
+    }
+    .slide4 .container .domain {
+        bottom: 8vh;
+    }
+}
